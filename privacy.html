@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プライバシーポリシー | raspi4 Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <a href="index.html">← raspi4 Dashboard</a>
+    <h1>プライバシーポリシー</h1>
+    <p>raspi4 Dashboard は、運営者本人が利用する個人用アプリです。本ポリシーは、このアプリおよび紹介用公開サイトのデータの取り扱いを説明します。</p>
+    <section>
+      <h2>1. 取得する情報と目的</h2>
+      <p>本人の同意に基づき、Google Calendar API と Google Tasks API を読み取り専用で使用します。</p>
+      <ul>
+        <li>Calendar：対象カレンダーの直近の予定を取得し、タイトル、開始・終了日時、終日指定、予定へのリンクなどを表示します。</li>
+        <li>Tasks：対象リストの未完了タスクを取得し、タイトル、期限日、リスト名を表示します。</li>
+        <li>OAuth 認証情報：継続取得に必要な更新トークン等を保持します。Google のパスワードは取得・保存しません。</li>
+      </ul>
+      <p>API 応答には表示対象以外のフィールドが含まれる場合がありますが、アプリは表示に必要な項目を抽出します。目的は本人による予定・タスクの確認と残り時間の表示のみです。予定・タスクを変更する機能はありません。</p>
+    </section>
+    <section>
+      <h2>2. 保存先・保持期間・保護</h2>
+      <p>取得した Google の予定・タスクは、運営者管理下のサーバーのメモリと、表示する端末のブラウザー上で扱います。現在の実装では履歴データベースへの保存は行いません。取得失敗時には、最後に取得した情報を古いデータとして保持・表示する場合があります。サーバープロセスの停止・再起動およびブラウザーのページを閉じることで、それぞれのメモリ上の情報は失われます。</p>
+      <p>OAuth 認証情報はサーバー上のアクセス権を制限したファイルに保存し、連携解除まで保持します。Google との通信とブラウザーからのダッシュボード接続は HTTPS、初回設定のサーバー転送には SSH を使用します。ダッシュボードの閲覧は家庭内ネットワーク・許可した VPN に制限します。認証情報はダッシュボードのブラウザーや紹介用公開サイトには配信しません。</p>
+    </section>
+    <section>
+      <h2>3. 第三者提供・AI への利用</h2>
+      <p>Google から取得した予定・タスクを販売せず、広告目的や AI モデルの学習・推論に利用せず、AI ベンダーや GitHub Pages に送信しません。Google API との認証・取得通信を除き、このアプリが当該データを外部サービスへ転送する機能はありません。Google Calendar・Tasks へのリンクを開いた場合は、Google のサービスとポリシーが適用されます。</p>
+      <p>raspi4 Dashboard による Google API から受領した情報の使用および他のアプリへの転送は、限定的な使用（Limited Use）の要件を含む <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a> に準拠します。</p>
+    </section>
+    <section>
+      <h2>4. 連携解除・データ削除</h2>
+      <p><a href="https://myaccount.google.com/connections">Google アカウントの接続管理</a>で、このアプリへのアクセス権を取り消せます。運営者はサーバーの Google 連携認証ファイルを削除し、ダッシュボードサービスを再起動することで、保存した認証情報とメモリ上の取得データを削除できます。表示中のブラウザーページも閉じてください。これらの操作によって Google 側の予定・タスクが削除されることはありません。</p>
+    </section>
+    <section>
+      <h2>5. 紹介用公開サイト</h2>
+      <p>この公開サイトは静的な説明ページです。独自のアクセス解析、広告、フォーム、Google ログイン機能は設置していません。ホスティング事業者の GitHub は、サイト配信に伴い IP アドレス等を処理する場合があります。詳しくは <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub のプライバシーステートメント</a>をご覧ください。Google Calendar・Tasks のデータや OAuth 認証情報は公開リポジトリに含めません。</p>
+    </section>
+    <section>
+      <h2>6. 変更・お問い合わせ</h2>
+      <p>機能や情報の取り扱いを変更する場合は、本ページを更新します。</p>
+      <p>運営・お問い合わせ：<a href="mailto:pantherhead@gmail.com">pantherhead@gmail.com</a></p>
+    </section>
+    <footer><a href="index.html">raspi4 Dashboard</a> · <a href="terms.html">利用条件</a></footer>
+  </main>
+</body>
+</html>
